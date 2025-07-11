@@ -96,7 +96,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                       ),
                     ),
               suffixIcon: controller.isSearchMode && globalSearch
-                  ? controller.isSearching
+                  //? controller.isSearching
                       ? const Padding(
                           padding: EdgeInsets.symmetric(
                             vertical: 10.0,
@@ -109,7 +109,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                             ),
                           ),
                         )
-                      : TextButton.icon(
+                      /*: TextButton.icon(
                           onPressed: controller.setServer,
                           style: TextButton.styleFrom(
                             shape: RoundedRectangleBorder(
@@ -123,7 +123,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                                 Matrix.of(context).client.homeserver!.host,
                             maxLines: 2,
                           ),
-                        )
+                        )*/
                   : SizedBox(
                       width: 0,
                       child: ClientChooserButton(controller),
