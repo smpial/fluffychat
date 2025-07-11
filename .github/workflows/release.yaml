@@ -92,6 +92,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - name: Check java version
+        run: |
+          java -version
+          echo $JAVA_HOME
       - name: Prepare Android Release Build
         env:
           FDROID_KEY: ${{ secrets.FDROID_KEY }}
@@ -134,6 +138,11 @@ jobs:
       - run: ./flutter/bin/flutter build linux --target-platform linux-${{ matrix.arch }}
       - name: Create archive
         run: tar -czf fluffychat-linux-${{ matrix.arch }}.tar.gz -C build/linux/${{ matrix.arch }}/release/bundle/ .
+      - name: Upload Linux Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Linux Build ${{ matrix.arch }}
+          path: fluffychat-linux-${{ matrix.arch }}.tar.gz
       - name: Upload to release
         uses: actions/upload-release-asset@v1
         #env:
