@@ -42,8 +42,8 @@ jobs:
           path: fluffychat-web.tar.gz
       - name: Upload to release
         uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: fluffychat-web.tar.gz
@@ -98,10 +98,15 @@ jobs:
           PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
         run: ./scripts/prepare-android-release.sh
       - run: flutter build apk --release
+      - name: Upload Android Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Android Build
+          path: build/app/outputs/apk/release/app-release.apk
       - name: Upload to release
         uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: build/app/outputs/apk/release/app-release.apk
