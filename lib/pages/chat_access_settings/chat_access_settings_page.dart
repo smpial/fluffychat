@@ -235,7 +235,7 @@ class _AliasListTile extends StatelessWidget {
           : const Icon(Icons.link_outlined),
       title: InkWell(
         onTap: () => FluffyShare.share(
-          'https://matrix.to/#/$alias',
+          'https://chat.klucva.ru/#/$alias',
           context,
         ),
         child: SelectableText(
