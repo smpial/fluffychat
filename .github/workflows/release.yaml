@@ -49,25 +49,25 @@ jobs:
           asset_path: fluffychat-web.tar.gz
           asset_name: fluffychat-web.tar.gz
           asset_content_type: application/gzip
-      - name: Install and build tailwindcss
-        working-directory: docs
-        run: |
-          npm install tailwindcss @tailwindcss/cli
-          npx tailwindcss -o ./tailwind.css
-      - name: Build Website
-        run: |
-          mv docs public
-          mv repo public || true
-          mv build/web/ public/web
-          cp public/web -r public/nightly
-      - name: Deploy to GitHub Pages
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          cname: fluffychat.im
+#      - name: Install and build tailwindcss
+#        working-directory: docs
+#        run: |
+#          npm install tailwindcss @tailwindcss/cli
+#          npx tailwindcss -o ./tailwind.css
+#      - name: Build Website
+#        run: |
+#          mv docs public
+#          mv repo public || true
+#          mv build/web/ public/web
+#          cp public/web -r public/nightly
+#      - name: Deploy to GitHub Pages
+#        if: startsWith(github.ref, 'refs/tags/v')
+#        uses: peaceiris/actions-gh-pages@v4
+#        with:
+#          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+#          publish_dir: ./public
+#          publish_branch: gh-pages
+#          cname: fluffychat.im
 
   build_apk:
     runs-on: ubuntu-latest
