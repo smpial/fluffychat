@@ -40,16 +40,15 @@ jobs:
         with:
           name: Web Build
           path: fluffychat-web.tar.gz
-      - name: Upload to release
-        uses: actions/upload-release-asset@v1
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: fluffychat-web.tar.gz
-          asset_name: fluffychat-web.tar.gz
-          asset_content_type: application/gzip
-          token: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Upload to release
+#        uses: actions/upload-release-asset@v1
+#        #env:
+#          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+#        with:
+#          upload_url: ${{ github.event.release.upload_url }}
+#          asset_path: fluffychat-web.tar.gz
+#          asset_name: fluffychat-web.tar.gz
+#          asset_content_type: application/gzip
 #      - name: Install and build tailwindcss
 #        working-directory: docs
 #        run: |
@@ -108,16 +107,15 @@ jobs:
         with:
           name: Android Build
           path: build/app/outputs/apk/release/app-release.apk
-      - name: Upload to release
-        uses: actions/upload-release-asset@v1
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: build/app/outputs/apk/release/app-release.apk
-          asset_name: fluffychat.apk
-          asset_content_type: application/vnd.android.package-archive
-          token: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Upload to release
+#        uses: actions/upload-release-asset@v1
+#        #env:
+#          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+#        with:
+#          upload_url: ${{ github.event.release.upload_url }}
+#          asset_path: build/app/outputs/apk/release/app-release.apk
+#          asset_name: fluffychat.apk
+#          asset_content_type: application/vnd.android.package-archive
 
   build_linux:
     strategy:
@@ -143,16 +141,15 @@ jobs:
         with:
           name: Linux Build ${{ matrix.arch }}
           path: fluffychat-linux-${{ matrix.arch }}.tar.gz
-      - name: Upload to release
-        uses: actions/upload-release-asset@v1
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: fluffychat-linux-${{ matrix.arch }}.tar.gz
-          asset_name: fluffychat-linux-${{ matrix.arch }}.tar.gz
-          asset_content_type: application/gzip
-          token: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Upload to release
+#        uses: actions/upload-release-asset@v1
+#        #env:
+#          #GITHUB_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+#        with:
+#          upload_url: ${{ github.event.release.upload_url }}
+#          asset_path: fluffychat-linux-${{ matrix.arch }}.tar.gz
+#          asset_name: fluffychat-linux-${{ matrix.arch }}.tar.gz
+#          asset_content_type: application/gzip
 
 #  deploy_playstore:
 #    runs-on: ubuntu-latest
