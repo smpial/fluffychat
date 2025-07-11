@@ -1,5 +1,5 @@
 {
-  "application_name": "FluffyChat",
+  "application_name": "KlucvaChat",
   "application_welcome_message": null,
   "default_homeserver": "matrix.klucva.ru",
   "web_base_url": "https://chat.klucva.ru/web",
