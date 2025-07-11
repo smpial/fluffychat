@@ -64,7 +64,7 @@
                <category android:name="android.intent.category.BROWSABLE" />
                <data
                    android:scheme="https"
-                   android:host="matrix.to"/>
+                   android:host="chat.klucva.ru"/>
             </intent-filter>
 
             <!-- App can open matrix: uris -->
