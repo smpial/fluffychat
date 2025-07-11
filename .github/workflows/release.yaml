@@ -86,14 +86,14 @@ jobs:
         run: git apply ./scripts/enable-android-google-services.patch
       - uses: moonrepo/setup-rust@v1
       - run: flutter pub get
-#      - name: Prepare Android Release Build
-#        env:
-#          FDROID_KEY: ${{ secrets.FDROID_KEY }}
-#          FDROID_KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
-#          PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
-#        run: ./scripts/prepare-android-release.sh
-#      - run: flutter build apk --release
-      - run: flutter build apk
+      - name: Prepare Android Release Build
+        env:
+          FDROID_KEY: ${{ secrets.FDROID_KEY }}
+          FDROID_KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
+          PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
+        run: ./scripts/prepare-android-release.sh
+      - run: flutter build apk --release
+#      - run: flutter build apk
       - name: Upload Android Build
         uses: actions/upload-artifact@v4
         with:
