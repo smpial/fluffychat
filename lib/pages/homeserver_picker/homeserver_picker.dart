@@ -65,8 +65,9 @@ class HomeserverPickerController extends State<HomeserverPicker> {
   /// well-known information and forwards to the login page depending on the
   /// login type.
   Future<void> checkHomeserverAction({bool legacyPasswordLogin = false}) async {
-    final homeserverInput =
-        homeserverController.text.trim().toLowerCase().replaceAll(' ', '-');
+    /*final homeserverInput =
+        homeserverController.text.trim().toLowerCase().replaceAll(' ', '-');*/
+    final homeserverInput = AppConfig.defaultHomeserver;
 
     if (homeserverInput.isEmpty) {
       final client = await Matrix.of(context).getLoginClient();
