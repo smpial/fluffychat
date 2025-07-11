@@ -46,7 +46,7 @@ enum AppSettings<T> {
   audioRecordingSamplingRate<int>('audioRecordingSamplingRate', 44100),
   pushNotificationsGatewayUrl<String>(
     'pushNotificationsGatewayUrl',
-    'https://push.fluffychat.im/_matrix/push/v1/notify',
+    'https://matrix-push.klucva.ru/_matrix/push/v1/notify',
   ),
   pushNotificationsPusherFormat<String>(
     'pushNotificationsPusherFormat',
