@@ -141,7 +141,7 @@ class HomeserverPickerView extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          TextField(
+                          /*TextField(
                             onSubmitted: (_) =>
                                 controller.checkHomeserverAction(),
                             controller: controller.homeserverController,
@@ -208,7 +208,7 @@ class HomeserverPickerView extends StatelessWidget {
                                 icon: const Icon(Icons.info_outlined),
                               ),
                             ),
-                          ),
+                          ),*/
                           const SizedBox(height: 32),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -222,7 +222,7 @@ class HomeserverPickerView extends StatelessWidget {
                                 ? const LinearProgressIndicator()
                                 : Text(L10n.of(context).continueText),
                           ),
-                          TextButton(
+                          /*TextButton(
                             style: TextButton.styleFrom(
                               foregroundColor: theme.colorScheme.secondary,
                               textStyle: theme.textTheme.labelMedium,
@@ -233,7 +233,7 @@ class HomeserverPickerView extends StatelessWidget {
                                       legacyPasswordLogin: true,
                                     ),
                             child: Text(L10n.of(context).loginWithMatrixId),
-                          ),
+                          ),*/
                         ],
                       ),
                     ),
