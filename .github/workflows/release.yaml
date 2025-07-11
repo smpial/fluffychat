@@ -49,6 +49,7 @@ jobs:
           asset_path: fluffychat-web.tar.gz
           asset_name: fluffychat-web.tar.gz
           asset_content_type: application/gzip
+          token: ${{ secrets.GITHUB_TOKEN }}
 #      - name: Install and build tailwindcss
 #        working-directory: docs
 #        run: |
@@ -112,6 +113,7 @@ jobs:
           asset_path: build/app/outputs/apk/release/app-release.apk
           asset_name: fluffychat.apk
           asset_content_type: application/vnd.android.package-archive
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   build_linux:
     strategy:
@@ -141,6 +143,7 @@ jobs:
           asset_path: fluffychat-linux-${{ matrix.arch }}.tar.gz
           asset_name: fluffychat-linux-${{ matrix.arch }}.tar.gz
           asset_content_type: application/gzip
+          token: ${{ secrets.GITHUB_TOKEN }}
 
 #  deploy_playstore:
 #    runs-on: ubuntu-latest
