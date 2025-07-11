@@ -43,7 +43,7 @@ class ChatEncryptionSettingsView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SwitchListTile(
+              /*SwitchListTile(
                 secondary: CircleAvatar(
                   foregroundColor: theme.colorScheme.onPrimaryContainer,
                   backgroundColor: theme.colorScheme.primaryContainer,
@@ -52,7 +52,7 @@ class ChatEncryptionSettingsView extends StatelessWidget {
                 title: Text(L10n.of(context).encryptThisChat),
                 value: room.encrypted,
                 onChanged: controller.enableEncryption,
-              ),
+              ),*/
               Icon(
                 CupertinoIcons.lock_shield,
                 size: 128,
