@@ -67,7 +67,7 @@ abstract class AppConfig {
   static const String deepLinkPrefix = 'ru.klucva.fluffychat://chat/';
   static const String schemePrefix = 'matrix:';
   static const String pushNotificationsChannelId = 'fluffychat_push';
-  static const String pushNotificationsAppId = 'chat.klucva.fluffychat';
+  static const String pushNotificationsAppId = 'ru.klucva.fluffychat';
   static const double borderRadius = 18.0;
   static const double columnWidth = 360.0;
   static final Uri homeserverList = Uri(
