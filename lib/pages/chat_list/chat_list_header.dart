@@ -124,10 +124,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                             maxLines: 2,
                           ),
                         )*/
-                  : SizedBox(
-                      width: 0,
-                      child: ClientChooserButton(controller),
-                    )
+                  : null
                   : SizedBox(
                       width: 0,
                       child: ClientChooserButton(controller),
