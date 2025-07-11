@@ -127,15 +127,15 @@ flutter:
     - assets/vodozemac/
 
 msix_config:
-  display_name: FluffyChat
-  publisher_display_name: FluffyChat
-  publisher: CN=FluffyChat, O=Head of bad integration tests, L=Matrix, S=Internet, C=EU
-  identity_name: chat.fluffy.fluffychat
+  display_name: KlucvaChat
+  publisher_display_name: Klucva Inc.
+  publisher: CN=Klucva Inc., O=Klucva Inc., L=Matrix, S=Internet, C=RU
+  identity_name: ru.klucva.fluffychat
   logo_path: assets\logo.png
   capabilities: internetClient, location, microphone, webcam
   protocol_activation: https
-  app_uri_handler_hosts: fluffychat.im, matrix.to
-  execution_alias: fluffychat
+  app_uri_handler_hosts: chat.klucva.ru
+  execution_alias: klucvachat
   sign_msix: false
   install_certificate: false
 
