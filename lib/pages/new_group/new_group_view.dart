@@ -115,7 +115,7 @@ class NewGroupView extends StatelessWidget {
                     )
                   : const SizedBox.shrink(),
             ),
-            AnimatedSize(
+            /*AnimatedSize(
               duration: FluffyThemes.animationDuration,
               curve: FluffyThemes.animationCurve,
               child: controller.createGroupType == CreateGroupType.space
@@ -136,7 +136,7 @@ class NewGroupView extends StatelessWidget {
                       value: !controller.publicGroup,
                       onChanged: null,
                     ),
-            ),
+            ),*/
             AnimatedSize(
               duration: FluffyThemes.animationDuration,
               curve: FluffyThemes.animationCurve,
