@@ -165,7 +165,7 @@ class SettingsSecurityView extends StatelessWidget {
                     ),
                     onTap: controller.dehydrateAction,
                   ),
-                  Divider(color: theme.dividerColor),
+                  /*Divider(color: theme.dividerColor),
                   ListTile(
                     iconColor: Colors.red,
                     leading: const Icon(Icons.delete_outlined),
@@ -174,7 +174,7 @@ class SettingsSecurityView extends StatelessWidget {
                       style: const TextStyle(color: Colors.red),
                     ),
                     onTap: controller.deleteAccountAction,
-                  ),
+                  ),*/
                 ],
               );
             },
