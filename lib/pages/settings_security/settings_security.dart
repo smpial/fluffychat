@@ -48,6 +48,7 @@ class SettingsSecurityController extends State<SettingsSecurity> {
   }
 
   void deleteAccountAction() async {
+    return;
     if (await showOkCancelAlertDialog(
           useRootNavigator: false,
           context: context,
