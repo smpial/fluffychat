@@ -157,6 +157,7 @@ class ChatListController extends State<ChatList>
   static const String _serverStoreNamespace = 'im.fluffychat.search.server';
 
   void setServer() async {
+    return;
     final newServer = await showTextInputDialog(
       useRootNavigator: false,
       title: L10n.of(context).changeTheHomeserver,
