@@ -102,7 +102,7 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                               ),
                             ),
                           )
-                        : TextButton.icon(
+                        /*: TextButton.icon(
                             onPressed: controller.setServer,
                             style: TextButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -116,7 +116,8 @@ class ChatListHeader extends StatelessWidget implements PreferredSizeWidget {
                                   Matrix.of(context).client.homeserver!.host,
                               maxLines: 2,
                             ),
-                          )
+                          )*/
+                  : null
                   : SizedBox(width: 0, child: ClientChooserButton(controller)),
             ),
           );
