@@ -28,7 +28,7 @@ class QrCodeViewer extends StatelessWidget {
     final imageResult = await showFutureLoadingDialog(
       context: context,
       future: () {
-        final inviteLink = 'https://matrix.to/#/$content';
+        final inviteLink = 'https://chat.klucva.ru/#/$content';
         final image = QRImage(inviteLink, size: 256, radius: 1).generate();
         return compute(encodePng, image);
       },
@@ -47,7 +47,7 @@ class QrCodeViewer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final inviteLink = 'https://matrix.to/#/$content';
+    final inviteLink = 'https://chat.klucva.ru/#/$content';
     return Scaffold(
       backgroundColor: Colors.black.withAlpha(128),
       extendBodyBehindAppBar: true,
