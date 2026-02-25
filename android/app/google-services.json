@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "341348110380",
+    "project_id": "fluffychat-bfc69",
+    "storage_bucket": "fluffychat-bfc69.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341348110380:android:886dc22c7e551905f00189",
+        "android_client_info": {
+          "package_name": "ru.klucva.fluffychat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqaMbHs0o3ld7N94g76Tqm0r3dxLXcDzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
