@@ -58,7 +58,7 @@ void connectToHomeserverFlow(
       final pathSegments = List.of(
         GoRouter.of(context).routeInformationProvider.value.uri.pathSegments,
       );
-      pathSegments.removeLast();
+      if(pathSegments.isNotEmpty && pathSegments.last != "home") pathSegments.removeLast();
       pathSegments.add('login');
       context.go('/${pathSegments.join('/')}', extra: client);
       setState(AsyncSnapshot.withData(ConnectionState.done, true));
