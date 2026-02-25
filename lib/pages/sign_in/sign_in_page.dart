@@ -52,7 +52,7 @@ class SignInPage extends StatelessWidget {
                           : L10n.of(context).signInGreeting,
                       textAlign: .center,
                     ),
-                    TextField(
+                    /*TextField(
                       readOnly:
                           state.publicHomeservers.connectionState ==
                           ConnectionState.waiting,
@@ -73,7 +73,7 @@ class SignInPage extends StatelessWidget {
                           context,
                         ).searchOrEnterHomeserverAddress,
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               ),
