@@ -89,7 +89,8 @@ jobs:
           FDROID_KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
           PLAYSTORE_DEPLOY_KEY: ${{ secrets.PLAYSTORE_DEPLOY_KEY }}
         run: ./scripts/prepare-android-release.sh
-      - run: flutter build apk --release --target-platform android-arm,android-arm64
+      #- run: flutter build apk --release --target-platform android-arm,android-arm64
+      - run: flutter build apk --target-platform android-arm,android-arm64
       - name: Upload Android Build
         uses: actions/upload-artifact@v4
         with:
