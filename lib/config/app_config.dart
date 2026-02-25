@@ -30,10 +30,8 @@ abstract class AppConfig {
       'https://chat.klucva.ru/fluffychat/faq/#how_do_i_find_other_users';
   static const String howDoIGetStickersTutorial =
       'https://chat.klucva.ru/fluffychat/faq/#how_do_i_get_stickers';
-  #static const String appId = 'ru.klucva.FluffyChat';
-  #static const String appOpenUrlScheme = 'ru.klucva.fluffy';
-  static const String appId = 'im.fluffychat.FluffyChat';
-  static const String appOpenUrlScheme = 'chat.fluffy';
+  static const String appId = 'ru.klucva.FluffyChat';
+  static const String appOpenUrlScheme = 'ru.klucva.fluffy';
 
   static const String sourceCodeUrl =
       'https://github.com/smpial/fluffychat';
